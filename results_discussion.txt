@@ -1,0 +1,11 @@
+The custom Multi-Layer Perceptron (MLP) achieved approximately 77% test accuracy using only sentence-level polarity features extracted from VADER and TextBlob.
+
+The confusion matrix shows a relatively balanced performance between positive and negative classes. The model correctly classified 2856 negative reviews and 2942 positive reviews. The number of false positives (866) and false negatives (836) is also similar, which indicates that the classifier does not strongly favor one class over the other.
+
+Since only sentence-level lexicon features were used (without word embeddings, TF-IDF, or deep language models), this performance is considered reasonable. The results demonstrate that polarity-based features still carry meaningful sentiment information that can be learned by a neural network.
+
+During training, different learning rates and epoch values were tested. Some configurations led to unstable behavior or class collapse (predicting only one class). After adjusting the training settings and allowing the model to train longer, the network converged properly and achieved stable performance.
+
+This experiment highlights the importance of hyperparameter selection and training dynamics when implementing neural networks from scratch. Unlike high-level frameworks, manual implementation requires careful tuning of learning rate and training duration to ensure proper convergence.
+
+Overall, the results confirm that the forward propagation, binary cross-entropy loss, backpropagation, and gradient descent updates were implemented correctly.
